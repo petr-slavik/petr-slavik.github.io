@@ -164,3 +164,11 @@ function toggleService(index) {
     serviceCards[index].classList.toggle("active");
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const user = "honzabarton";
+    const domain = "seznam.cz";
+    const email = user + "@" + domain;
+
+    const emailLink = document.getElementById("email-link");
+    emailLink.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+});
