@@ -67,22 +67,27 @@ document.addEventListener("DOMContentLoaded", function () {
     function openModal(index) {
         currentImageIndex = index;
         const imageUrl = galleryImages[currentImageIndex].src;
-        
+        const imageAlt = galleryImages[currentImageIndex].alt; // Načtení popisku
+
         modal = document.createElement("div");
         modal.classList.add("modal");
         modal.innerHTML = `
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <img src="${imageUrl}" alt="Gallery Image">
-                <button class="prev">←</button>
-                <button class="next">→</button>
+                <span class="close">&times;</span> <!-- Opraveno ID pro kliknutí -->
+                <div class="modal-container">
+                    <button class="prev">←</button>
+                    <img src="${imageUrl}" alt="${imageAlt}" id="modalImage">
+                    <button class="next">→</button>
+                </div>
+                <p class="modal-caption">${imageAlt}</p>
             </div>
         `;
         document.body.appendChild(modal);
         modal.style.display = "flex";
 
-        // Zavření při kliknutí na "X"
-        modal.querySelector(".close").addEventListener("click", closeModal);
+        // **Teď přidáme správně event listener pro zavření**
+        const closeButton = modal.querySelector(".close");
+        closeButton.addEventListener("click", closeModal);
 
         // Zavření při kliknutí mimo obrázek
         modal.addEventListener("click", (e) => {
@@ -114,7 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (currentImageIndex >= galleryImages.length) {
             currentImageIndex = 0;
         }
-        modal.querySelector("img").src = galleryImages[currentImageIndex].src;
+
+        const newImage = galleryImages[currentImageIndex];
+        modal.querySelector("#modalImage").src = newImage.src;
+        modal.querySelector(".modal-caption").textContent = newImage.alt; // Aktualizace popisku
     }
 
     function handleKeyPress(event) {
@@ -171,4 +179,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const emailLink = document.getElementById("email-link");
     emailLink.innerHTML = `<a href="mailto:${email}">${email}</a>`;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".fixed-nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled"); // Přidá stín při scrollování
+        } else {
+            navbar.classList.remove("scrolled"); // Odstraní stín, pokud je nahoře
+        }
+    });
 });
