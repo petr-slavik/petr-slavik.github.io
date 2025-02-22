@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNDr. Jan Bartoň – Hydrogeolog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Geologické služby RNDr. Jan Bartoň</h1>
+            </div>
+        </div>
+        <nav class="fixed-nav">
+            <ul>
+                <li><a href="#home">Úvod</a></li>
+                <li><a href="#about">O mně</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#references">Reference</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="intro container">
+            <h1>RNDr. Jan Bartoň</h1>
+            <p>Odborné geologické služby</p>
+            <p>Geolog - Hydrogeolog – Geochemik – Environmentální studie</p>
+            <p>Nabízím komplexní služeby v oblasti hydrogeologie, geochemie a environmentálních studií. Nabízím průzkumy kontaminace, analýzy rizik, ekologické audity a sanace environmentálních zátěží.</p>
+            <p>Práce provádím po celé ČR i SR, dle domluvy.</p>
+            <a href="#contact" class="btn">&#9990; Kontaktujte mě</a>
+    </section>
+
+    <section id="about" class="about container fade-in-section">
+        <h2>O mně</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <img src="images/profilovka.jpg" alt="RNDr. Jan Bartoň" class="profile-photo float-right">
+                <p>Jsem absolventem Přírodovědecké fakulty brněnské Masarykovy univerzity (obor geologie, hydrogeologie, geochemie, státní zkouška 2007) a Přírodovědecké fakulty Univerzita Komenského v Bratislavě (obor ekologické a environmentální vědy, rigorózní zkouška 2021).</p>
+                <p>Od roku 2007 jsem provedl cca 100 analýz rizik kontaminovaných území, dále průzkumy kontaminace, monitoringy, ekologické audity, hydrogeologické posudky, průzkumy a studie, sanace environmentálních zátěží, supervizní a oponentní činnost, lektorskou činnost, včetně regionálních a bilančních studií, a to jak pro soukromé orgány, tak pro státní správu a samosprávu.</p>
+                <p>Mám zkušenosti i se zahraničními projekty, zejména Slovensko, dále Etiopie, Mongolsko, Srbsko, Albánie, Kosovo, Arménie, Angola, Německo a další.</p>
+                <p>Jsem osobou odborně způsobilou projektovat, provádět a vyhodnocovat geologické práce v oborech Hydrogeologie, Sanační geologie, Environmentální geologie a Geochemie, na Slovensku pak v oborech Geologický průzkum životního prostředí, Hydrogeologický průzkum a Geochemické práce.</p>
+                <p>Působím jako člen výkonné rady České Asociaci hydrogeologů, kde jsem regionálním zástupcem pro jižní Moravu.</p>
+                <a href="docs/jan-barton-cv.pdf" download class="btn download-btn">📄 Stáhnout profesní životopis</a>    
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services container fade-in-section">
+        <h2>Služby</h2>
+        <div class="service-cards">
+            <div class="service-card" onclick="toggleService(0)">
+                <i class="fas fa-water service-icon"></i>
+                <h3>Hydrogeologické průzkumy a studie</h3>
+                <p>Včetně provádění a vyhodnocení chemismu a hydrodynamických zkoušek.</p>
+                <div class="service-details">
+                    <p>Detailní popis služby: Hydrogeologické průzkumy zahrnují odběr vzorků, modelování proudění podzemních vod a analýzu chemických vlastností.</p>
+                </div>
+            </div>
+            <div class="service-card" onclick="toggleService(1)">
+                <i class="fas fa-flask service-icon"></i>
+                <h3>Průzkumy kontaminace</h3>
+                <p>Podzemní a povrchové vody, zeminy/půdy, odpady, stavební konstrukce apod.</p>
+                <div class="service-details">
+                    <p>Detailní popis služby: Posouzení míry kontaminace vod a půdy, identifikace zdrojů znečištění a návrh opatření.</p>
+                </div>
+            </div>
+            <div class="service-card" onclick="toggleService(2)">
+                <i class="fas fa-vial service-icon"></i>
+                <h3>Geochemické analýzy</h3>
+                <p>Posuzování znečištění, analýzy rizik kontaminovaných území.</p>
+                <div class="service-details">
+                    <p>Detailní popis služby: Provádění laboratorních testů na přítomnost nebezpečných prvků a organických látek.</p>
+                </div>
+            </div>
+            <div class="service-card" onclick="toggleService(3)">
+                <i class="fas fa-leaf service-icon"></i>
+                <h3>Ekologické audity</h3>
+                <p>Sanace environmentálních zátěží, supervizní a oponentní činnost.</p>
+                <div class="service-details">
+                    <p>Detailní popis služby: Hodnocení ekologických dopadů průmyslové činnosti a návrh udržitelných řešení.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="references" class="references container fade-in-section">
+        <h2>Reference</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</li>
+            <li>Nulla quis sem at nibh elementum imperdiet.</li>
+            <li>Duis sagittis ipsum. Praesent mauris.</li>
+            <li>Fusce nec tellus sed augue semper porta.</li>
+            <li>Curabitur sodales ligula in libero.</li>
+            <li>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.</li>
+            <li>Maecenas tincidunt lacus at velit. Vivamus elementum semper nisi.</li>
+            <li>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu.</li>
+            <li>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.</li>
+        </ul>
+    </section>
+
+    
+    <section id="gallery" class="gallery container fade-in-section">
+        <h2>Galerie</h2>
+        <div class="gallery-grid">
+            <img src="images/Albanie-Elbasan.jpg" alt="Albánie - Elbasan - skládka">
+            <img src="images/Albanie-skladka.jpg" alt="Albánie - skládka">
+            <img src="images/Albanie-kontaminace.jpg" alt="Albánie - průzkum kontaminace">
+            <img src="images/Kosovo-monitoring.jpg" alt="Kosovo - monitoring podzemních vod">
+            <img src="images/Kosovo-sedimenty.jpg" alt="Kosovo - odběry dnových sedimentů">
+            <img src="images/Etiopie-projekty.jpg" alt="Etiopie - vodohospodářské projekty">
+        </div>
+    </section>
+
+    <section id="contact" class="contact container fade-in-section">
+        <h2>Kontakt</h2>
+        <h3>RNDr. Jan BARTOŇ</h3>
+        <p>&#127968; Podstránská 16, 627 00 Brno-Slatina <br>
+            IČ: 22330232, dat. schránka: hs9xz92<br>
+            &#9993; <a href="mailto:honzabarton@seznam.cz">honzabarton@seznam.cz</a><br>
+            &#9742; +420 602 410 840 </p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.1092501177573!2d16.644829776872074!3d49.1632107713311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129443b0a9c72d%3A0x5f0d8e2a58d8c26d!2sPodstr%C3%A1nsk%C3%A1%2016%2C%20627%2000%20Brno-Slatina!5e0!3m2!1scs!2scz!4v1708549531986!5m2!1scs!2scz"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <form class="contact-form">
+            <label for="name">Jméno a příjmení:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="service">Zvolená služba:</label>
+            <select id="service" name="service">
+                <option value="hydrogeologie">Hydrogeologie</option>
+                <option value="geochemie">Geochemie</option>
+                <option value="ekologicke_audity">Ekologické audity</option>
+                <option value="analyza_rizik">Analýza rizik</option>
+                <option value="jine">Jiné</option>
+            </select>
+            
+            <label for="message">Zpráva:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Souhlasím se zpracováním osobních údajů *</label>
+            </div>
+            
+            <button type="submit" class="btn">Odeslat</button>
+        </form>
+        <button class="btn schedule-btn" onclick="openGoogleCalendar()">Naplánovat schůzku</button>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 RNDr. Jan Bartoň | Hydrogeologie & Geochemie</p>
+        </div>
+    </footer>
+</body>
+</html>
