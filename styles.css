@@ -547,3 +547,12 @@ body.dark-mode .contact-form button {
 body.dark-mode .contact-form button:hover {
     background: #003366;
 }
+
+.divider {
+    max-width: 900px; /* Maximální šířka stejná jako container */
+    height: 2px; /* Tloušťka linky */
+    background: linear-gradient(to right, #004b8d, #ffffff); /* Modro-žlutý přechod */
+    margin: 60px auto; /* Vzdálenost od sekcí */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Jemný stín */
+    border-radius: 2px; /* Mírné zaoblení */
+}
