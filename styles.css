@@ -15,22 +15,52 @@ body {
     padding: 20px;
 }
 
+/* Navigační menu */
 .fixed-nav {
     position: fixed;
     width: 100%;
     background: #004b8d;
-    padding: 10px 0;
     top: 0;
     left: 0;
     z-index: 1000;
     transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    justify-content: center; /* Vycentruje wrapper uvnitř nav */
+    padding: 10px 0;
 }
 
-/* Stín se zobrazí při scrollování */
-.fixed-nav.scrolled {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Jemný stín pod menu */
+/* Kontejner pro zarovnání na šířku obsahu */
+.nav-wrapper {
+    width: 90%;
+    max-width: 1000px; /* Omezíme na standardní šířku containeru */
+    display: flex;
+    justify-content: space-between; /* Oddělí logo + název od menu */
+    align-items: center;
 }
 
+
+
+/* Blok pro logo + název */
+.site-info {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.nav-logo {
+    height: 20px; /* Nastav vhodnou výšku loga */
+    margin-right: 10px;
+}
+
+/* Název stránky */
+.site-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* Navigační seznam */
 .fixed-nav ul {
     display: flex;
     justify-content: center;
@@ -45,11 +75,74 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    position: relative;
+    padding: 5px 5px; /* přidáme padding pro lepší vzhled podbarvení */
+    border-radius: 20px; /* zaoblení */
+    transition: background 0.3s, transform 0.2s;
 }
 
 .fixed-nav ul li a:hover {
-    color: #ffcc00;
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* přidáváme stín pod text */
+    background: rgba(0, 0, 0, 0.2); /* jemné podbarvení pozadí */
+    transform: scale(1.05);
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* Mobilní verze navigace */
+@media screen and (max-width: 768px) {
+    /* Zarovnáme logo + název vlevo a hamburger menu vpravo */
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .fixed-nav .nav-wrapper {
+        padding-right: 60px; /* Přidá místo na pravé straně navigačního panelu */
+    }
+
+    .menu-toggle {
+        margin-right: 10px; /* Jen jemné doladění pozice hamburger menu */
+    }
+
+    /* Skryjeme klasické menu na mobilu */
+    .fixed-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #004b8d;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .fixed-nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Zobrazení menu při aktivaci */
+    .fixed-nav ul.show {
+        display: flex;
+    }
+
+    /* Zobrazíme hamburger menu */
+    .menu-toggle {
+        display: block;
+    }
 }
 
 .hero {
@@ -496,6 +589,10 @@ body.dark-mode .gallery-grid img {
 }
 
 body.dark-mode .theme-toggle {
+    background: #111922;
+}
+
+body.dark-mode .theme-toggle:hover {
     background: #444;
 }
 
