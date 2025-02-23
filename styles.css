@@ -199,7 +199,17 @@ body {
 
 .btn:hover {
     background: #003366;
+    color: white;
     transform: scale(1.05);
+}
+
+body.dark-mode .btn {
+    color: #ffffff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: var(--link-hover-dark);
+    color: #ffffff;
 }
 
 .about-content {
@@ -533,6 +543,10 @@ footer {
     --text-light: #333;
     --text-dark: #eeeeee;
     --accent: #004b8d;
+    --link-light: #004b8d;       /* tmavě modrá pro světlý režim */
+    --link-dark: #90caf9;        /* světle modrá pro tmavý režim */
+    --link-hover-light: #003366; /* tmavší modrá při hoveru (světlý režim) */
+    --link-hover-dark: #42a5f5;  /* výraznější modrá při hoveru (tmavý režim) */
 }
 
 /* Výchozí (světlý) režim */
@@ -547,6 +561,26 @@ body.dark-mode {
     color: var(--text-dark);
 }
 
+/* Základní styly odkazů */
+a {
+    color: var(--link-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover-light);
+}
+
+/* Styly odkazů pro tmavý režim */
+body.dark-mode a {
+    color: var(--link-dark);
+}
+
+body.dark-mode a:hover {
+    color: var(--link-hover-dark);
+}
+
 /* Navigace */
 .fixed-nav {
     background: var(--accent);
@@ -556,22 +590,7 @@ body.dark-mode .fixed-nav {
     background: #111922;
 }
 
-/* Sekce */
-.section-light {
-    background-color: var(--bg-light);
-}
 
-.section-dark {
-    background-color: #e0e0e0;
-}
-
-body.dark-mode .section-light {
-    background-color: #2c2c2c;
-}
-
-body.dark-mode .section-dark {
-    background-color: #3a3a3a;
-}
 
 /* Galerie */
 body.dark-mode .gallery-grid img {
@@ -734,8 +753,8 @@ body.dark-mode .contact-form button:hover {
 }
 
 .contact-qr img {
-    width: 150px;
-    height: 150x;
+    width: 200px;
+    height: 200x;
     border-radius: 8px;
 }
 
@@ -749,3 +768,153 @@ body.dark-mode .contact-form button:hover {
         margin-top: 20px;
     }
 }
+
+
+
+
+/* TYPY OD GPT */
+h2 {
+    position: relative;
+    display: inline-block; /* důležité pro přizpůsobení délce textu */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+  }
+  
+  h2::after {
+    content: "";
+    width: 100%; /* přizpůsobí délku čáry délce textu */
+    height: 3px;
+    background: linear-gradient(to right, #004b8d, #ffffff); /* Modro-žlutý přechod */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  
+  .btn {
+    padding: 12px 30px;
+    border-radius: 15px;  /* zakulacené rohy */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* lehký stín */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  }
+  
+  .profile-photo {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .profile-photo:hover {
+    transform: scale(1.1);
+  }
+  
+
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .icon-list li {
+    margin-bottom: 12px;
+    font-size: 1 em;
+    display: flex;                /* zajistí správné zarovnání ikony s textem */
+    align-items: center;          /* vertikální zarovnání na střed */
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .icon-list li:hover {
+    transform: translateX(5px);
+  }
+  
+  .icon-list li i {
+    color: var(--accent);
+    width: 24px;                  /* pevná šířka ikony zajistí, že text začne vždy stejně */
+    text-align: center;           /* zarovná ikonku na střed v rámci její šířky */
+    margin-right: 10px;           /* odsazení textu od ikony */
+  }
+  
+  
+  
+
+  section:nth-of-type(even) {
+    background-color: #f9f9f9;
+    border-radius: 5px;  /* zakulacené rohy */
+  }
+  
+  body.dark-mode section:nth-of-type(even) {
+    background-color: #2c333a;
+    border-radius: 5px;  /* zakulacené rohy */
+  }
+  
+
+
+
+/*INTRO EFEKTY*/
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+  }
+  
+  .intro-text {
+    flex: 1;
+  }
+  
+  .intro-image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .intro-image img {
+    max-width: 75%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+
+  .intro-image img:hover {
+    transform: scale(1.1);
+  }
+  
+
+  
+  @media(max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .intro-image {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  .intro-text, .intro-image {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+  }
+  
+  .intro-image {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; transform: none; }
+  }
+  
+  
