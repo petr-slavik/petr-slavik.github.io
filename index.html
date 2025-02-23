@@ -13,6 +13,15 @@
     <link rel="manifest" href="/site.webmanifest">
     <script src="js/scripts.js" defer></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPWVZ64E67"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NPWVZ64E67');
+</script>
 <body>
     <header>
         <div class="hero">
@@ -130,11 +139,21 @@
 
     <section id="contact" class="contact container fade-in-section">
         <h2>Kontakt</h2>
-        <h3>RNDr. Jan BARTOŇ</h3>
-        <p>&#127968; Podstránská 16, 627 00 Brno-Slatina <br>
-            IČ: 22330232, dat. schránka: hs9xz92<br>
-            &#9993;  <span id="email-link"></span><br>
-            &#9742;  +420 602 410 840 </p>
+        <div class="contact-info">
+            <div class="contact-details">
+                <h3>RNDr. Jan BARTOŇ</h3>
+                <p>
+                    &#127968; Podstránská 16, 627 00 Brno-Slatina <br>
+                    IČ: 22330232, dat. schránka: hs9xz92<br>
+                    &#9993; <span id="email-link"></span><br>
+                    &#9742; +420 602 410 840
+                </p>
+            </div>
+            <div class="contact-qr">
+                <img src="images/vcard3.png" alt="QR kód - Jan Bartoň vCard" title="Naskenujte QR kód pro uložení kontaktu (vCard)">
+            </div>
+        </div>
+
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.1092501177573!2d16.644829776872074!3d49.1632107713311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47129443b0a9c72d%3A0x5f0d8e2a58d8c26d!2sPodstr%C3%A1nsk%C3%A1%2016%2C%20627%2000%20Brno-Slatina!5e0!3m2!1scs!2scz!4v1708549531986!5m2!1scs!2scz"

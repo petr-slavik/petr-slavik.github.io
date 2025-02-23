@@ -718,3 +718,34 @@ body.dark-mode .contact-form button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Jemný stín */
     border-radius: 2px; /* Mírné zaoblení */
 }
+
+
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-qr img {
+    width: 150px;
+    height: 150x;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-qr {
+        margin-top: 20px;
+    }
+}
