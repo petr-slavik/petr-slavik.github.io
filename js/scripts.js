@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("dark-mode", "disabled");
             themeToggle.textContent = "\u263E"; //Dark
         }
-    });
+    }); 
+
+
 
     // Plynulé scrollování při kliknutí na menu
     document.querySelectorAll("nav ul li a").forEach(anchor => {
@@ -69,11 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
         const imageUrl = galleryImages[currentImageIndex].src;
         const imageAlt = galleryImages[currentImageIndex].alt; // Načtení popisku
 
+        // Pokud modal už existuje, odstraníme ho
+        if (document.querySelector(".modal")) {
+            document.querySelector(".modal").remove();
+        }
+
         modal = document.createElement("div");
         modal.classList.add("modal");
         modal.innerHTML = `
             <div class="modal-content">
-                <span class="close">&times;</span> <!-- Opraveno ID pro kliknutí -->
+                <button class="close" id="closeModal">&times;</button> <!-- Opraveno ID pro kliknutí -->
                 <div class="modal-container">
                     <button class="prev">←</button>
                     <img src="${imageUrl}" alt="${imageAlt}" id="modalImage">
@@ -85,9 +92,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(modal);
         modal.style.display = "flex";
 
-        // **Teď přidáme správně event listener pro zavření**
-        const closeButton = modal.querySelector(".close");
-        closeButton.addEventListener("click", closeModal);
+        // **Správné připojení event listeneru k tlačítku "X"**
+        document.getElementById("closeModal").addEventListener("click", closeModal);
 
         // Zavření při kliknutí mimo obrázek
         modal.addEventListener("click", (e) => {
@@ -192,3 +198,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// Skript pro zobrazovani a kryvani Hamburger Menu
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("show"); // Přepne třídu "show", která zobrazuje menu
+    });
+});
+document.querySelectorAll(".fixed-nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("show"); // Po kliknutí na odkaz se menu zavře
+    });
+});
+
