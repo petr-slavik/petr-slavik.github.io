@@ -304,7 +304,8 @@ body {
 
 .gallery-grid img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3; /* Všechny obrázky budou mít stejný poměr stran */
+    object-fit: cover;
     display: block;
     border-radius: 8px;
     cursor: pointer;
