@@ -68,7 +68,7 @@ body {
 }
 
 .fixed-nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .fixed-nav ul li a {
@@ -76,8 +76,8 @@ body {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    padding: 5px 5px; /* přidáme padding pro lepší vzhled podbarvení */
-    border-radius: 20px; /* zaoblení */
+    padding: 10px 5px; /* přidáme padding pro lepší vzhled podbarvení */
+    border-radius: 15px; /* zaoblení */
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -95,8 +95,16 @@ body {
     font-size: 24px;
     color: white;
     cursor: pointer;
+    padding: 2px 10px; /* přidáme padding pro lepší vzhled podbarvení */
+    border-radius: 20px; /* zaoblení */
+    transition: background 0.3s, transform 0.2s;
 }
 
+.menu-toggle:hover {
+    /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* přidáváme stín pod text */
+    background: rgba(0, 0, 0, 0.2); /* jemné podbarvení pozadí */
+    transform: scale(1.05);
+}
 
 
 /* Mobilní verze navigace */
@@ -115,7 +123,7 @@ body {
     }
 
     .menu-toggle {
-        margin-right: 10px; /* Jen jemné doladění pozice hamburger menu */
+        margin-right: 17px; /* Jen jemné doladění pozice hamburger menu */
     }
 
     /* Skryjeme klasické menu na mobilu */
@@ -572,7 +580,7 @@ body.dark-mode .gallery-grid img {
 /* Přepínač motivu */
 .theme-toggle {
     position: fixed;
-    top: 7px;
+    top: 15px;
     right: 7px;
     padding: 10px 15px;
     background: var(--accent);
