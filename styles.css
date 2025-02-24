@@ -896,6 +896,12 @@ h2 {
       flex-direction: column;
       text-align: center;
     }
+
+    .intro-text .icon-list {
+        display: inline-block; /* zajistí správné zarovnání */
+        text-align: left;      /* ponechá text v seznamu zarovnaný vlevo, ale samotný seznam vycentruje */
+        margin: 0 auto;        /* zarovnání na střed */
+    }
   
     .intro-image {
       text-align: center;
