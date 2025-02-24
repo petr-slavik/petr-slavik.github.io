@@ -155,7 +155,7 @@ body {
 }
 
 .hero {
-    background: url('images/geology-banner.jpg') center/cover;
+    background: none;
     color: rgb(255, 255, 255);
     padding: 30px 0;
     text-align: center;
