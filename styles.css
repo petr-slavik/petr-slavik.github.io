@@ -52,6 +52,17 @@ body {
     margin-right: 10px;
 }
 
+.logo-link {
+    text-decoration: none;
+    color: inherit; /* zachová původní barvu textu */
+    display: flex;
+    align-items: center;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
 /* Název stránky */
 .site-name {
     font-size: 18px;
